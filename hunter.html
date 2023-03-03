@@ -61,26 +61,8 @@
             }
           </style>
           <script>
-            const bushesChecked = document.querySelector('#bushes');
-            const penalty = document.querySelector('#penalty');
             const helpButton = document.querySelector('.help-options p');
             const helpReport = document.querySelector('#help');
-          
-            let count = 0;
-            let penaltyCount = 0;
-          
-            document.addEventListener('click', function(e) {
-              if (e.target.classList.contains('bush')) {
-                count++;
-                bushesChecked.textContent = `Number of bushes checked is ${count}.`;
-          
-                if (e.target.classList.contains('cat')) {
-                  penaltyCount++;
-                  penalty.textContent = `Penalty is ${penaltyCount}.`;
-                }
-              }
-            });
-          
             helpButton.addEventListener('click', function() {
               helpReport.style.display = 'block';
             });
