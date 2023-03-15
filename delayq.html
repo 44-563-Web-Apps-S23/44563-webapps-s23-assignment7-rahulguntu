@@ -61,5 +61,19 @@ function delay(){
 		let container = document.getElementById('target');
 		container.insertBefore(removedItem, container.firstChild);
 	}
+    
+const container = document.querySelector('#my-container');
+
+function promoteElement() {
+  const elements = container.children;
+  const randomIndex = Math.floor(Math.random() * elements.length); // generate random index
+  const randomElement = elements[randomIndex];
+  container.removeChild(randomElement); // remove element from current position
+  container.insertBefore(randomElement, container.firstChild); // insert element at the front
+}
+
+// add event listener to the promote button
+document.querySelector('#promote-button').addEventListener('click', promoteElement);
+
 }
 </script>

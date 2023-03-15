@@ -42,6 +42,16 @@
 				document.getElementById('target').innerHTML = "Time was " + elapsed + " milliseconds.";
 			}
 		}, 8000);
+        function resetGame() {
+          mouseLocation = Math.floor(Math.random() * 24); // generate new random value for mouse location
+          catLocation = Math.floor(Math.random() * 24); // generate new random value for cat location
+          bushes = 0; // reset number of bushes to zero
+          penalty = 0; // reset penalty to zero
+        }
+
+        // add event listener to the game button
+        document.querySelector('#game-button').addEventListener('click', resetGame);
+
 	}
 </script>
 </body>

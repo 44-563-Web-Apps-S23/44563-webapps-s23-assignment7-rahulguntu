@@ -138,10 +138,8 @@ function check(position) {
   if (gameOver) {
     document.getElementById("penalty").innerHTML = penalty;
   }
-
   lastCheck = position;
 }
-
 function help() {
   const catRow = Math.floor(catLocation / 6);
   const catCol = catLocation % 6;
@@ -163,8 +161,10 @@ function help() {
   return "sorry, no help available";
 const helpButton = document.getElementById("help-button");
 helpButton.onclick = help;
-}
 
+let mouseLocation = Math.floor(Math.random() * 24); // generates random value from 0 to 23
+let catLocation = Math.floor(Math.random() * 24); // generates random value from 0 to 23
+}
 </script>
 </body>
 </html>
